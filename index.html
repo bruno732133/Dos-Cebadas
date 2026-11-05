@@ -1,1 +1,327 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOS CEBADAS | Mates y Yerba</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f7f3e9;
+      color: #263b2d;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    header {
+      background: #203b2c;
+      color: #fff9eb;
+      padding: 22px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 470px;
+      display: flex;
+      align-items: center;
+      padding: 65px 9%;
+      background:
+        linear-gradient(90deg, #203b2ce8, #203b2c55),
+        url('https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=1400&q=85') center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 550px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 1.1;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #c79b58;
+      color: #203b2c;
+      padding: 14px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: #a47a40;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      margin: 12px 0;
+    }
+
+    .description {
+      color: #687368;
+      margin: 0 auto 35px;
+      max-width: 550px;
+      line-height: 1.7;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .product {
+      background: #fffdf7;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 5px 20px #24362715;
+    }
+
+    .product img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product-info {
+      padding: 22px;
+    }
+
+    .product h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: #748074;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      color: #a47a40;
+      font-weight: 700;
+      margin-bottom: 17px;
+    }
+
+    .small-button {
+      display: inline-block;
+      background: #203b2c;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 11px;
+      color: #8a8a7d;
+      margin-top: 12px;
+    }
+
+    .about {
+      background: #e9e5d6;
+      padding: 65px 9%;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.8;
+      color: #596657;
+    }
+
+    .contact {
+      background: #203b2c;
+      color: #fff9eb;
+      padding: 65px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+      color: #d7dfd3;
+    }
+
+    footer {
+      background: #172b20;
+      color: #c8d0c4;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+
+      .hero {
+        min-height: 420px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="logo">DOS CEBADAS</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <span class="eyebrow">EL SABOR DE LO NUESTRO</span>
+      <h1>El ritual de todos los días.</h1>
+      <p>Mates, yerba y todo lo necesario para disfrutar de esos momentos que nos unen.</p>
+      <a href="#productos" class="button">VER PRODUCTOS</a>
+    </div>
+  </section>
+
+  <section class="section" id="productos">
+    <span class="eyebrow">NUESTRO CATÁLOGO</span>
+    <h2>Encontrá tu próximo mate</h2>
+    <p class="description">
+      Descubrí nuestros productos y consultá por disponibilidad y precios.
+    </p>
+
+    <div class="products">
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=700&q=80" alt="Mate ilustrativo">
+        <div class="product-info">
+          <h3>Mates</h3>
+          <p>Distintos estilos para acompañar cada cebada.</p>
+          <div class="price">Precio a consultar</div>
+          <a class="small-button" href="#contacto">CONSULTAR</a>
+          <div class="note">Imagen ilustrativa.</div>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?auto=format&fit=crop&w=700&q=80" alt="Yerba ilustrativa">
+        <div class="product-info">
+          <h3>Yerba mate</h3>
+          <p>Consultá por las variedades disponibles.</p>
+          <div class="price">Precio a consultar</div>
+          <a class="small-button" href="#contacto">CONSULTAR</a>
+          <div class="note">Imagen ilustrativa.</div>
+        </div>
+      </article>
+
+      <article class="product">
+        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=80" alt="Bombilla ilustrativa">
+        <div class="product-info">
+          <h3>Bombillas</h3>
+          <p>Consultá por modelos y disponibilidad.</p>
+          <div class="price">Precio a consultar</div>
+          <a class="small-button" href="#contacto">CONSULTAR</a>
+          <div class="note">Imagen ilustrativa. Disponibilidad a confirmar.</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="about" id="nosotros">
+    <span class="eyebrow">NUESTRA ESENCIA</span>
+    <h2>Mucho más que un mate</h2>
+    <p>
+      En DOS CEBADAS celebramos nuestras costumbres.
+      Creemos que cada mate es una oportunidad para compartir,
+      charlar y disfrutar de los pequeños momentos.
+    </p>
+  </section>
+
+  <section class="contact" id="contacto">
+    <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+    <h2>¿Buscás algo en particular?</h2>
+    <p>Consultanos por nuestros productos, precios y disponibilidad.</p>
+
+    <a class="button" href="https://wa.me/5491112345678" target="_blank">
+      HABLAR POR WHATSAPP
+    </a>
+  </section>
+
+  <footer>
+    <p>DOS CEBADAS © 2026 - El ritual de todos los días.</p>
+    <p>Imágenes ilustrativas. Productos y disponibilidad a confirmar.</p>
+  </footer>
+
+</body>
+</html>
